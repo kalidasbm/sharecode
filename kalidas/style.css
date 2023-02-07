@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.myDiv picture img {
+  height: 350px;
+  width: -webkit-fill-available !important;
+}
+
+.myDiv {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: cadetblue;
+  border-style: solid;
+  border-radius: 0.9%;
+  border-color: darkolivegreen;
+  border-width: 7px;
+  opacity: 40%;
+  box-shadow: 0px 0px 0px 0px grey;
+  transition: box-shadow 1.5s, opacity 1s;
+}
+
+
+picture,
+.mobileHeading,
+.onHoverEffect p {
+  justify-content: center;
+  display: flex;
+}
+.mobileHeading {
+  background-color: antiquewhite;
+  margin: 0%;
+  padding: 20px;
+}
+
+/* picture, .mobileHeading{
+  background-color: cadetblue;
+} */
+
+.onHoverEffect {
+  flex-direction: column;
+  display: flex;
+  height: 0px;
+  visibility: hidden;
+  overflow: hidden;
+  transition: height 1.5s, visibility 1.5s;
+}
+
+.myDiv:hover {
+  box-shadow: 4px 4px 10px 5px grey;
+  opacity: 100%;
+}
+.myDiv:hover>.onHoverEffect {
+  display: flex;
+  height: 210px;
+  visibility: visible;
+}
